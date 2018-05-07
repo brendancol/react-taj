@@ -1,0 +1,32 @@
+.react-taj{
+  display: flex;
+  flex-direction: column;
+}
+.react-taj__download{
+  font-size: 14px;
+  color: gray;
+  width: 100px;
+  margin-left: 10px;
+  height: 25px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.rt-th.rt-resizable-header.-cursor-pointer {
+      font-weight: bold;
+      text-align: left;
+      border-bottom: 1px solid #e6e6e6;
+}
+.rt-tr.-odd {
+    background: #f2f2f2;
+}
+.ReactTable .rt-resizer {
+  right: 0;
+  z-index: 1;
+}
+
+.react-taj__csv{
+  display: flex;
+  margin: 20px;
+}
