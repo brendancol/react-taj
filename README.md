@@ -8,6 +8,12 @@ Table as JSON library in React used to display JSON end-points in table and also
 npm install react-taj
 
 ```
+##### Import styles by including react-table.css
+
+```
+import 'react-table/react-table.css'
+```
+
 ### Example
 
 
