@@ -1,7 +1,7 @@
 {
   "name": "react-taj",
   "main": "dist/react-taj.js",
-  "version": "1.0.0",
+  "version": "0.1.2",
   "description": "a library which takes an end point of JSON then display it in a table",
   "publishConfig": {
     "access": "public"
