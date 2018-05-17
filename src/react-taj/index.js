@@ -4,23 +4,10 @@ import PropTypes from 'prop-types';
 import {CSVLink, CSVDownload} from 'react-csv';
 import Loading from '../loading/index';
 import './index.css';
-import * as s1 from './s1Helpers.js';
 import * as s2 from './multi-index-df-helpers.js';
-import * as s3 from './simple-df-helpers.js';
-const colors = [
-  '#f7fcf0',
-  '#e0f3db',
-  '#ccebc5',
-  '#a8ddb5',
-  '#7bccc4',
-  '#4eb3d3',
-  '#2b8cbe',
-  '#0868ac',
-  '#084081'
-];
+
 const pagination = false;
 const filter = false;
-// const colorsArray = this.props.colors || colors;
 class ReactTaj extends Component {
   constructor() {
     super();
@@ -43,28 +30,15 @@ changeTable(url){
       return response.json();
     })
     .then(function(data) {
-      if (data.tableType==='Simple') {
-        const { generateCol, generateData,findPivot } = s3;
-        const { newData, maxMin } = generateData(data);
-        const cols = generateCol(data, maxMin, colors);
-        self.setState({
-         tableColumns: data,
-         headers:cols,
-         isFetching: false,
-         contentData:newData
-        });
-      }
-      else if (data.tableType==='MultiIndex') {
-        const { generateCol, generateData,findPivot } = s2;
-        const { newData, maxMin } = generateData(data);
-        const cols = generateCol(data, maxMin, colors);
+        const { generateCol, generateData } = s2;
+        const newData = generateData(data);
+        const cols = generateCol(data);
           self.setState({
             tableColumns: data,
             headers:cols,
             contentData:newData,
             isFetching: false
           });
-      }
     }).catch(error=>{
       this.setState({ error: error,isFetching: false });
     });
@@ -86,7 +60,7 @@ componentWillReceiveProps(nextProps) {
   const data = {
     url: e.target.url.value
   };
-  changeTable(JSON.stringify(data));
+  this.changeTable(JSON.stringify(data));
 }
 
   render() {

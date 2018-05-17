@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "a library which takes an end point of JSON then display it in a table",
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "scripts": {
     "start:watch": "NODE_ENV=development nodemon -q src/index.js",
