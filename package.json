@@ -1,8 +1,8 @@
 {
   "name": "react-taj",
   "main": "dist/react-taj.js",
-  "version": "0.1.2",
-  "description": "a library which takes an end point of JSON then display it in a table",
+  "version": "0.1.3",
+  "description": "Rich tables based on Tables-As-JSON specification",
   "publishConfig": {
     "access": "public"
   },
