@@ -4,10 +4,13 @@
 }
 .react-taj__download{
   font-size: 14px;
-  color: gray;
+  color: black;
+  font-weight: bold;
   width: 100px;
   margin-left: 10px;
-  height: 25px;
+  background: #f68450;
+  height: 34px;
+  line-height: 34px;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
@@ -29,4 +32,25 @@
 .react-taj__csv{
   display: flex;
   margin: 20px;
+}
+.error_message{
+  margin-top: 60px;
+  margin-left: 42px;
+}
+
+.react-taj__controllers{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 80px;
+  align-items: center;
+}
+.react-taj__search {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 34px;
 }

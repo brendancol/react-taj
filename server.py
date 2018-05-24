@@ -17,8 +17,8 @@ data_path = path.join(here, 'data', 'iris.csv')
 
 iris = pd.read_csv(data_path)
 
-# mpg_path = path.join(here, 'data', 'mpg.csv')
-# mpg = pd.read_csv(mpg_path)
+mpg_path = path.join(here, 'data', 'mpg.csv')
+mpg = pd.read_csv(mpg_path)
 
 db_path = path.join(here, 'data', 'db.json')
 
